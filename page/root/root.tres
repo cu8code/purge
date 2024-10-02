@@ -1,0 +1,7 @@
+[gd_resource type="TileSet" load_steps=2 format=3 uid="uid://h8ft38f384h1"]
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_gsx0u"]
+tile_data = PackedInt32Array(0, 196608, 2)
+
+[resource]
+pattern_0 = SubResource("TileMapPattern_gsx0u")

@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://dujeo6u1rff5"]
+
+[ext_resource type="Script" path="res://component/game/game.gd" id="1_h4m1o"]
+[ext_resource type="Script" path="res://component/camera/camera.gd" id="2_0hyru"]
+
+[node name="root" type="Node"]
+
+[node name="Game" type="Node2D" parent="."]
+script = ExtResource("1_h4m1o")
+max_player = 2
+number_of_row = 10
+number_of_col = 10
+cell_size = 200
+color = Color(0, 0, 0, 0.0784314)
+
+[node name="Player" type="Node2D" parent="Game"]
+
+[node name="Camera2D" type="Camera2D" parent="Game/Player" node_paths=PackedStringArray("game")]
+position = Vector2(361, 641)
+script = ExtResource("2_0hyru")
+game = NodePath("../..")
+pan_speed = 1.5
+can_pan = true
+can_zoom = true
+press_duration = 0.2
+
+[node name="Player-2" type="Node2D" parent="Game"]
